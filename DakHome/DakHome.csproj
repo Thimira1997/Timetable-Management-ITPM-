@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CF225C1-5611-4125-8E54-2CD497FBE452}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DakHome</RootNamespace>
+    <AssemblyName>DakHome</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ASUS\Desktop\New folder %282%29\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/DakHome/</UpdateUrl>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consecutive.cs" />
+    <Compile Include="HomePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePanel.Designer.cs">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecture.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="LocConAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocConAdd.Designer.cs">
+      <DependentUpon>LocConAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocConHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocConHome.Designer.cs">
+      <DependentUpon>LocConHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocConRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocConRemove.Designer.cs">
+      <DependentUpon>LocConRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocConsecutive.cs" />
+    <Compile Include="LocConShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocConShow.Designer.cs">
+      <DependentUpon>LocConShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocConUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocConUpdate.Designer.cs">
+      <DependentUpon>LocConUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNomal.cs" />
+    <Compile Include="LocNormalAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNormalAdd.Designer.cs">
+      <DependentUpon>LocNormalAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNormalRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNormalRemove.Designer.cs">
+      <DependentUpon>LocNormalRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNormalSessionHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNormalSessionHome.Designer.cs">
+      <DependentUpon>LocNormalSessionHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNormalShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNormalShow.Designer.cs">
+      <DependentUpon>LocNormalShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNormalUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNormalUpdate.Designer.cs">
+      <DependentUpon>LocNormalUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNotAvailable.cs" />
+    <Compile Include="LocNotAvaShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNotAvaShow.Designer.cs">
+      <DependentUpon>LocNotAvaShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNotAvaRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNotAvaRemove.Designer.cs">
+      <DependentUpon>LocNotAvaRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNotAvaUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNotAvaUpdate.Designer.cs">
+      <DependentUpon>LocNotAvaUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNotAvaHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNotAvaHome.Designer.cs">
+      <DependentUpon>LocNotAvaHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocParallel.cs" />
+    <Compile Include="locParallelAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="locParallelAdd.Designer.cs">
+      <DependentUpon>locParallelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="locParallelRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="locParallelRemove.Designer.cs">
+      <DependentUpon>locParallelRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocParallelSessionHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocParallelSessionHome.Designer.cs">
+      <DependentUpon>LocParallelSessionHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="locParallelShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="locParallelShow.Designer.cs">
+      <DependentUpon>locParallelShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="locParallelUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="locParallelUpdate.Designer.cs">
+      <DependentUpon>locParallelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonOverlaping.cs" />
+    <Compile Include="NormalClz.cs" />
+    <Compile Include="NotAvailable.cs" />
+    <Compile Include="Parallel.cs" />
+    <Compile Include="SeConsecutiveAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeConsecutiveAdd.Designer.cs">
+      <DependentUpon>SeConsecutiveAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeConsecutiveHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeConsecutiveHome.Designer.cs">
+      <DependentUpon>SeConsecutiveHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeConsecutiveRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeConsecutiveRemove.Designer.cs">
+      <DependentUpon>SeConsecutiveRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeConsecutiveShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeConsecutiveShow.Designer.cs">
+      <DependentUpon>SeConsecutiveShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeConsecutiveUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeConsecutiveUpdate.Designer.cs">
+      <DependentUpon>SeConsecutiveUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeNonOverAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeNonOverAdd.Designer.cs">
+      <DependentUpon>SeNonOverAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeNonOverHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeNonOverHome.Designer.cs">
+      <DependentUpon>SeNonOverHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeNonOverRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeNonOverRemove.Designer.cs">
+      <DependentUpon>SeNonOverRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeNonOverShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeNonOverShow.Designer.cs">
+      <DependentUpon>SeNonOverShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeNonOverUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeNonOverUpdate.Designer.cs">
+      <DependentUpon>SeNonOverUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionNotAvaUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionNotAvaUpdate.Designer.cs">
+      <DependentUpon>SessionNotAvaUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionHome.Designer.cs">
+      <DependentUpon>SessionHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionParallelAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionParallelAdd.Designer.cs">
+      <DependentUpon>SessionParallelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sessionParallelHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sessionParallelHome.Designer.cs">
+      <DependentUpon>sessionParallelHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionParallelUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionParallelUpdate.Designer.cs">
+      <DependentUpon>SessionParallelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionParslleShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionParslleShow.Designer.cs">
+      <DependentUpon>SessionParslleShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionRemove.Designer.cs">
+      <DependentUpon>SessionRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionsParallelRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionsParallelRemove.Designer.cs">
+      <DependentUpon>SessionsParallelRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionUpdate.Designer.cs">
+      <DependentUpon>SessionUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionShow.Designer.cs">
+      <DependentUpon>SessionShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionAdd.Designer.cs">
+      <DependentUpon>SessionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentGroupAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroupAdd.Designer.cs">
+      <DependentUpon>StudentGroupAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGroupHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroupHome.Designer.cs">
+      <DependentUpon>StudentGroupHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGroupRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroupRemove.Designer.cs">
+      <DependentUpon>StudentGroupRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGroupShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroupShow.Designer.cs">
+      <DependentUpon>StudentGroupShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroupUpdate.Designer.cs">
+      <DependentUpon>StudentGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubHome.Designer.cs">
+      <DependentUpon>SubHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs" />
+    <Compile Include="SubShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubShow.Designer.cs">
+      <DependentUpon>SubShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubRemove.Designer.cs">
+      <DependentUpon>SubRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubUpdate.Designer.cs">
+      <DependentUpon>SubUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubAdd.Designer.cs">
+      <DependentUpon>SubAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecRemove.Designer.cs">
+      <DependentUpon>LecRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecUpdate.Designer.cs">
+      <DependentUpon>LecUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecShow.Designer.cs">
+      <DependentUpon>LecShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecAdd.Designer.cs">
+      <DependentUpon>LecAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LecHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecHome.Designer.cs">
+      <DependentUpon>LecHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocNotAvaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocNotAvaAdd.Designer.cs">
+      <DependentUpon>LocNotAvaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionNotAvaRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionNotAvaRemove.Designer.cs">
+      <DependentUpon>SessionNotAvaRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionNotAvaShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionNotAvaShow.Designer.cs">
+      <DependentUpon>SessionNotAvaShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionNotAvaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionNotAvaAdd.Designer.cs">
+      <DependentUpon>SessionNotAvaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionNotAvaHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionNotAvaHome.Designer.cs">
+      <DependentUpon>SessionNotAvaHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs" />
+    <Compile Include="TagAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagAdd.Designer.cs">
+      <DependentUpon>TagAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagHome.Designer.cs">
+      <DependentUpon>TagHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagRemove.Designer.cs">
+      <DependentUpon>TagRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagShow.Designer.cs">
+      <DependentUpon>TagShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TagUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagUpdate.Designer.cs">
+      <DependentUpon>TagUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable.Designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingDays.cs" />
+    <Compile Include="WorkUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkUpdate.Designer.cs">
+      <DependentUpon>WorkUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkShow.Designer.cs">
+      <DependentUpon>WorkShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkRemove.Designer.cs">
+      <DependentUpon>WorkRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkAdd.Designer.cs">
+      <DependentUpon>WorkAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkHome.Designer.cs">
+      <DependentUpon>WorkHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Static.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Static.Designer.cs">
+      <DependentUpon>Static.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocShow.Designer.cs">
+      <DependentUpon>LocShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocRemove.Designer.cs">
+      <DependentUpon>LocRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocUpdate.Designer.cs">
+      <DependentUpon>LocUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocAdd.Designer.cs">
+      <DependentUpon>LocAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocHome.Designer.cs">
+      <DependentUpon>LocHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HomePanel.resx">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocConAdd.resx">
+      <DependentUpon>LocConAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocConHome.resx">
+      <DependentUpon>LocConHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocConRemove.resx">
+      <DependentUpon>LocConRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocConShow.resx">
+      <DependentUpon>LocConShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocConUpdate.resx">
+      <DependentUpon>LocConUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNormalAdd.resx">
+      <DependentUpon>LocNormalAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNormalRemove.resx">
+      <DependentUpon>LocNormalRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNormalSessionHome.resx">
+      <DependentUpon>LocNormalSessionHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNormalShow.resx">
+      <DependentUpon>LocNormalShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNormalUpdate.resx">
+      <DependentUpon>LocNormalUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNotAvaShow.resx">
+      <DependentUpon>LocNotAvaShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNotAvaRemove.resx">
+      <DependentUpon>LocNotAvaRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNotAvaUpdate.resx">
+      <DependentUpon>LocNotAvaUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNotAvaHome.resx">
+      <DependentUpon>LocNotAvaHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="locParallelAdd.resx">
+      <DependentUpon>locParallelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="locParallelRemove.resx">
+      <DependentUpon>locParallelRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocParallelSessionHome.resx">
+      <DependentUpon>LocParallelSessionHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="locParallelShow.resx">
+      <DependentUpon>locParallelShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="locParallelUpdate.resx">
+      <DependentUpon>locParallelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeConsecutiveAdd.resx">
+      <DependentUpon>SeConsecutiveAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeConsecutiveHome.resx">
+      <DependentUpon>SeConsecutiveHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeConsecutiveRemove.resx">
+      <DependentUpon>SeConsecutiveRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeConsecutiveShow.resx">
+      <DependentUpon>SeConsecutiveShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeConsecutiveUpdate.resx">
+      <DependentUpon>SeConsecutiveUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeNonOverAdd.resx">
+      <DependentUpon>SeNonOverAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeNonOverHome.resx">
+      <DependentUpon>SeNonOverHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeNonOverRemove.resx">
+      <DependentUpon>SeNonOverRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeNonOverShow.resx">
+      <DependentUpon>SeNonOverShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeNonOverUpdate.resx">
+      <DependentUpon>SeNonOverUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionNotAvaUpdate.resx">
+      <DependentUpon>SessionNotAvaUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionHome.resx">
+      <DependentUpon>SessionHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionParallelAdd.resx">
+      <DependentUpon>SessionParallelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sessionParallelHome.resx">
+      <DependentUpon>sessionParallelHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionParallelUpdate.resx">
+      <DependentUpon>SessionParallelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionParslleShow.resx">
+      <DependentUpon>SessionParslleShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionRemove.resx">
+      <DependentUpon>SessionRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionsParallelRemove.resx">
+      <DependentUpon>SessionsParallelRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionUpdate.resx">
+      <DependentUpon>SessionUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionShow.resx">
+      <DependentUpon>SessionShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionAdd.resx">
+      <DependentUpon>SessionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGroupAdd.resx">
+      <DependentUpon>StudentGroupAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGroupHome.resx">
+      <DependentUpon>StudentGroupHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGroupRemove.resx">
+      <DependentUpon>StudentGroupRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGroupShow.resx">
+      <DependentUpon>StudentGroupShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGroupUpdate.resx">
+      <DependentUpon>StudentGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubHome.resx">
+      <DependentUpon>SubHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubShow.resx">
+      <DependentUpon>SubShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubRemove.resx">
+      <DependentUpon>SubRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubUpdate.resx">
+      <DependentUpon>SubUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubAdd.resx">
+      <DependentUpon>SubAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecAdd.resx">
+      <DependentUpon>LecAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecHome.resx">
+      <DependentUpon>LecHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecRemove.resx">
+      <DependentUpon>LecRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecShow.resx">
+      <DependentUpon>LecShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecUpdate.resx">
+      <DependentUpon>LecUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocNotAvaAdd.resx">
+      <DependentUpon>LocNotAvaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionNotAvaRemove.resx">
+      <DependentUpon>SessionNotAvaRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionNotAvaAdd.resx">
+      <DependentUpon>SessionNotAvaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionNotAvaHome.resx">
+      <DependentUpon>SessionNotAvaHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionNotAvaShow.resx">
+      <DependentUpon>SessionNotAvaShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagAdd.resx">
+      <DependentUpon>TagAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagHome.resx">
+      <DependentUpon>TagHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagRemove.resx">
+      <DependentUpon>TagRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagShow.resx">
+      <DependentUpon>TagShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagUpdate.resx">
+      <DependentUpon>TagUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkShow.resx">
+      <DependentUpon>WorkShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkHome.resx">
+      <DependentUpon>WorkHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Static.resx">
+      <DependentUpon>Static.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocShow.resx">
+      <DependentUpon>LocShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocRemove.resx">
+      <DependentUpon>LocRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocAdd.resx">
+      <DependentUpon>LocAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocHome.resx">
+      <DependentUpon>LocHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocUpdate.resx">
+      <DependentUpon>LocUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WorkAdd.resx">
+      <DependentUpon>WorkAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkRemove.resx">
+      <DependentUpon>WorkRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkUpdate.resx">
+      <DependentUpon>WorkUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
