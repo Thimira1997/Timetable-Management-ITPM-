@@ -13,7 +13,7 @@ namespace DakHome
 {
     public partial class TagUpdate : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\TimeTableManagement.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=timetablemanagement.database.windows.net;Initial Catalog=timetable;User ID=it19032320;Password=456Dakshinda*;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         public TagUpdate()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace DakHome
 
         public void Select()
         {
-            using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\TimeTableManagement.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (SqlConnection con = new SqlConnection(@"Data Source=timetablemanagement.database.windows.net;Initial Catalog=timetable;User ID=it19032320;Password=456Dakshinda*;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 con.Open();
                 SqlDataAdapter sad = new SqlDataAdapter("SELECT *FROM  Tag_Table", con);
@@ -71,7 +71,7 @@ namespace DakHome
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\TimeTableManagement.mdf;Integrated Security=True;Connect Timeout=30";
+            string constring = @"Data Source=timetablemanagement.database.windows.net;Initial Catalog=timetable;User ID=it19032320;Password=456Dakshinda*;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             string query = "update Tag_Table set Tag_Code = '" + this.comboBox1.Text + "', Sub_Code = '" + this.textBox2.Text + "',Tag_Name ='" + this.comboBox1.Text + "',Related_Tag = '" + this.comboBox2.Text + "'  where  Tag_Code = '" + this.comboBox1.Text + "';";
             SqlConnection con = new SqlConnection(constring);
             SqlCommand cmd = new SqlCommand(query, con);
@@ -92,7 +92,7 @@ namespace DakHome
                 MessageBox.Show("ex.Message");
             }
 
-            using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ASUS\Documents\TimeTableManagement.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=timetablemanagement.database.windows.net;Initial Catalog=timetable;User ID=it19032320;Password=456Dakshinda*;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
             {
                 conn.Open();
                 SqlDataAdapter sad = new SqlDataAdapter("SELECT *FROM  Tag_Table WHERE Tag_Code = '" + comboBox1.Text.Trim() + "'", conn);
